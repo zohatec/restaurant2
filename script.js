@@ -1,32 +1,36 @@
+// Mark that JS is available, so CSS can safely hide reveal-animation elements.
+document.documentElement.classList.add('js');
+
 const translations = {
   bn: {
-    announcement: "রাজশাহীর স্বাদ, প্রতিটি পরিবেশনায়", brandTag: "পদ্মার শহরে স্বাদের ঠিকানা",
+    announcement: "রাজশাহীর স্বাদ, প্রতিটি পরিবেশনায়", brandTag: "পদ্মার শহরে স্বাদের ঠিকানা",
     navHome: "হোম", navStory: "আমাদের গল্প", navMenu: "মেনু", navVisit: "যোগাযোগ", bookTable: "টেবিল বুক করুন",
-    heroEyebrow: "রাজশাহীর নিজস্ব স্বাদ", heroTitle: "প্রতিটি স্বাদে<br><em>বাংলার গল্প।</em>", heroDesc: "পদ্মার পাড়ের মায়া, বাংলার চেনা রান্না আর আপন আতিথেয়তা—সব এক টেবিলে।",
-    exploreMenu: "মেনু দেখুন", ourStory: "আমাদের গল্প", heroNote: "স্থানীয় উপকরণ · যত্নে তৈরি · মন ভরে পরিবেশন", heroBottom: "রাজশাহী, বাংলাদেশ",
-    introKicker: "একটু থামুন,<br>স্বাদটা উপভোগ করুন।", introCopy: "আমরা বিশ্বাস করি, ভালো খাবার শুধু ক্ষুধা মেটায় না—মানুষকে কাছে আনে। তাই প্রতিটি রান্নায় আছে পরিচিত স্বাদ, বেছে নেওয়া উপকরণ আর ঘরোয়া যত্ন।",
-    storyEyebrow: "আমাদের গল্প", storyTitle: "শেকড়ের স্বাদ,<br><em>নতুন আয়োজনে।</em>", storyCaption: "স্বাদের মাঝে<br>আপনজনের ছোঁয়া",
-    storyP1: "রাজশাহী মানেই পদ্মার হাওয়া, আমের মিষ্টি ঘ্রাণ আর মানুষের আন্তরিকতা। সেই শহরের স্বাদ ও আতিথেয়তাকে ভালোবাসা থেকেই পদ্মা টেবিলের ভাবনা।",
-    storyP2: "আমাদের রান্নায় আছে বাংলার চেনা পদ, মৌসুমি উপকরণের ছোঁয়া এবং প্রতিটি অতিথিকে আপন করে নেওয়ার চেষ্টা। পরিবার, বন্ধু কিংবা নিজের জন্য একটু ভালো সময়—আপনার জন্য টেবিলটি সাজানো।",
-    comeVisit: "একবার ঘুরে আসুন", signature: "ভালোবাসা দিয়ে, পদ্মা টেবিল টিম",
-    menuEyebrow: "আমাদের আয়োজন", menuTitle: "পছন্দের স্বাদ,<br><em>আপনার টেবিলে।</em>", menuNote: "প্রতিদিনের পরিচিত খাবার থেকে বিশেষ দিনের আয়োজন—বেছে নিন আপনার পছন্দের পদ।",
-    filterAll: "সব খাবার", filterMain: "মূল খাবার", filterSnack: "হালকা খাবার", filterDessert: "ডেজার্ট", filterDrink: "পানীয়", popular: "জনপ্রিয়", chefPick: "শেফের পছন্দ",
-    dish1: "রাজশাহী স্পেশাল ভুনা খিচুড়ি", dish1Desc: "মসলা, ঘি আর মাংসের মজাদার মেলবন্ধন।", serving1: "পরিবেশন: ১ জন",
+    heroEyebrow: "রাজশাহীর নিজস্ব স্বাদ", heroTitle: "প্রতিটি স্বাদে<br><em>বাংলার গল্প।</em>", heroDesc: "পদ্মার পাড়ের মায়া, বাংলার চেনা রান্না আর আপন আতিথেয়তা—সব এক টেবিলে।",
+    exploreMenu: "মেনু দেখুন", ourStory: "আমাদের গল্প", heroNote: "স্থানীয় উপকরণ · যত্নে তৈরি · মন ভরে পরিবেশন", heroBottom: "রাজশাহী, বাংলাদেশ",
+    introKicker: "একটু থামুন,<br>স্বাদটা উপভোগ করুন।", introCopy: "আমরা বিশ্বাস করি, ভালো খাবার শুধু ক্ষুধা মেটায় না—মানুষকে কাছে আনে। তাই প্রতিটি রান্নায় আছে পরিচিত স্বাদ, বেছে নেওয়া উপকরণ আর ঘরোয়া যত্ন।",
+    storyEyebrow: "আমাদের গল্প", storyTitle: "শেকড়ের স্বাদ,<br><em>নতুন আয়োজনে।</em>", storyCaption: "স্বাদের মাঝে<br>আপনজনের ছোঁয়া",
+    storyP1: "রাজশাহী মানেই পদ্মার হাওয়া, আমের মিষ্টি ঘ্রাণ আর মানুষের আন্তরিকতা। সেই শহরের স্বাদ ও আতিথেয়তাকে ভালোবাসা থেকেই পদ্মা টেবিলের ভাবনা।",
+    storyP2: "আমাদের রান্নায় আছে বাংলার চেনা পদ, মৌসুমি উপকরণের ছোঁয়া এবং প্রতিটি অতিথিকে আপন করে নেওয়ার চেষ্টা। পরিবার, বন্ধু কিংবা নিজের জন্য একটু ভালো সময়—আপনার জন্য টেবিলটি সাজানো।",
+    comeVisit: "একবার ঘুরে আসুন", signature: "ভালোবাসা দিয়ে, পদ্মা টেবিল টিম",
+    menuEyebrow: "আমাদের আয়োজন", menuTitle: "পছন্দের স্বাদ,<br><em>আপনার টেবিলে।</em>", menuNote: "প্রতিদিনের পরিচিত খাবার থেকে বিশেষ দিনের আয়োজন—বেছে নিন আপনার পছন্দের পদ।",
+    filterAll: "সব খাবার", filterMain: "মূল খাবার", filterSnack: "হালকা খাবার", filterDessert: "ডেজার্ট", filterDrink: "পানীয়", popular: "জনপ্রিয়", chefPick: "শেফের পছন্দ",
+    dish1: "রাজশাহী স্পেশাল ভুনা খিচুড়ি", dish1Desc: "মসলা, ঘি আর মাংসের মজাদার মেলবন্ধন।", serving1: "পরিবেশন: ১ জন",
     dish2: "গরুর মাংসের কালাভুনা", dish2Desc: "ধীরে রান্না করা মসলাদার ঐতিহ্যবাহী পদ।", serving2: "পরিবেশন: ১ জন",
-    dish3: "ডালপুরি ও আলুর দম", dish3Desc: "বিকেলের আড্ডায় মুচমুচে, মজাদার আয়োজন।", serving3: "পরিবেশন: ২ পিস",
-    dish4: "মুরগির বিরিয়ানি", dish4Desc: "সুগন্ধি চাল, নরম মাংস আর ঘরোয়া মসলা।", serving4: "পরিবেশন: ১ জন",
-    dish5: "আমের ফিরনি", dish5Desc: "রাজশাহীর আমের ঘ্রাণে ঠান্ডা, মোলায়েম মিষ্টি।", serving5: "পরিবেশন: ১ বাটি",
-    dish6: "কাঁচা আমের শরবত", dish6Desc: "টক-মিষ্টি সতেজতায় রাজশাহীর মৌসুমি ছোঁয়া।", serving6: "পরিবেশন: ১ গ্লাস",
-    menuDisclaimer: "* প্রদর্শিত মেনু ও দাম নমুনা হিসেবে দেওয়া হয়েছে। প্রকৃত মেনু অনুযায়ী আপডেট করুন।", menuBottom: "ভালো খাবার, মনে রাখার মতো মুহূর্ত।",
-    featureEyebrow: "রাজশাহীর অনুপ্রেরণা", featureTitle: "আমের শহরের<br><em>মিষ্টি এক গল্প।</em>", featureDesc: "মৌসুম এলে রাজশাহীর আমের স্বাদ আমাদের বিশেষ আয়োজনেও জায়গা করে নেয়। প্রতিটি মৌসুমে থাকছে নতুন কিছু।", seeMenu: "মেনুতে দেখুন",
-    bookingEyebrow: "একসাথে সময় কাটান", bookingTitle: "আপনার জন্য<br><em>একটি টেবিল?</em>", bookingDesc: "পরিবার বা বন্ধুদের নিয়ে আসুন। পছন্দের দিন ও সময় জানিয়ে একটি অনুরোধ পাঠান।",
-    hoursTitle: "খোলার সময়", hoursValue: "প্রতিদিন · সকাল ১১টা – রাত ১০টা", locationTitle: "আমাদের শহর", formTitle: "রিজার্ভেশন অনুরোধ",
-    nameLabel: "আপনার নাম", phoneLabel: "ফোন নম্বর", dateLabel: "তারিখ", timeLabel: "সময়", selectTime: "সময় বেছে নিন", guestsLabel: "কতজন আসবেন?", messageLabel: "বিশেষ কোনো অনুরোধ? (ঐচ্ছিক)",
+    dish3: "ডালপুরি ও আলুর দম", dish3Desc: "বিকেলের আড্ডায় মুচমুচে, মজাদার আয়োজন।", serving3: "পরিবেশন: ২ পিস",
+    dish4: "মুরগির বিরিয়ানি", dish4Desc: "সুগন্ধি চাল, নরম মাংস আর ঘরোয়া মসলা।", serving4: "পরিবেশন: ১ জন",
+    dish5: "আমের ফিরনি", dish5Desc: "রাজশাহীর আমের ঘ্রাণে ঠান্ডা, মোলায়েম মিষ্টি।", serving5: "পরিবেশন: ১ বাটি",
+    dish6: "কাঁচা আমের শরবত", dish6Desc: "টক-মিষ্টি সতেজতায় রাজশাহীর মৌসুমি ছোঁয়া।", serving6: "পরিবেশন: ১ গ্লাস",
+    menuDisclaimer: "* প্রদর্শিত মেনু ও দাম নমুনা হিসেবে দেওয়া হয়েছে। প্রকৃত মেনু অনুযায়ী আপডেট করুন।", menuBottom: "ভালো খাবার, মনে রাখার মতো মুহূর্ত।",
+    featureEyebrow: "রাজশাহীর অনুপ্রেরণা", featureTitle: "আমের শহরের<br><em>মিষ্টি এক গল্প।</em>", featureDesc: "মৌসুম এলে রাজশাহীর আমের স্বাদ আমাদের বিশেষ আয়োজনেও জায়গা করে নেয়। প্রতিটি মৌসুমে থাকছে নতুন কিছু।", seeMenu: "মেনুতে দেখুন",
+    bookingEyebrow: "একসাথে সময় কাটান", bookingTitle: "আপনার জন্য<br><em>একটি টেবিল?</em>", bookingDesc: "পরিবার বা বন্ধুদের নিয়ে আসুন। পছন্দের দিন ও সময় জানিয়ে একটি অনুরোধ পাঠান।",
+    hoursTitle: "খোলার সময়", hoursValue: "প্রতিদিন · সকাল ১১টা – রাত ১০টা", locationTitle: "আমাদের শহর", formTitle: "রিজার্ভেশন অনুরোধ",
+    nameLabel: "আপনার নাম", phoneLabel: "ফোন নম্বর", dateLabel: "তারিখ", timeLabel: "সময়", selectTime: "সময় বেছে নিন", guestsLabel: "কতজন আসবেন?", messageLabel: "বিশেষ কোনো অনুরোধ? (ঐচ্ছিক)",
+    guest2: "২ জন", guest3: "৩ জন", guest4: "৪ জন", guest5: "৫ জন", guest6: "৬ জন", guest7: "৭ জন বা বেশি",
     sendRequest: "অনুরোধ পাঠান", formNote: "এটি ডেমো ফর্ম। সরাসরি বুকিং চালু করতে WhatsApp, ইমেইল বা ব্যাকএন্ড সংযুক্ত করতে হবে.",
-    successMessage: "ধন্যবাদ! আপনার অনুরোধটি এই ডেমো পেজে তৈরি হয়েছে। প্রকৃত বুকিং নিশ্চিত করতে রেস্টুরেন্টের সঙ্গে যোগাযোগ করুন।",
-    visitEyebrow: "দেখা হবে টেবিলে", visitTitle: "আপনার অপেক্ষায়<br><em>পদ্মা টেবিল।</em>", addressLabel: "ঠিকানা", addressValue: "রাজশাহী শহর, বাংলাদেশ<br>প্রকৃত ঠিকানা এখানে যুক্ত করুন", contactLabel: "যোগাযোগ", reserveNow: "এখনই বুক করুন", contactNote: "প্রকাশের আগে ফোন, ইমেইল ও সঠিক ঠিকানা বসিয়ে নিন।",
-    mapEyebrow: "আমাদের খুঁজে নিন", mapTitle: "আপনার কাছেই,<br><em>রাজশাহীর হৃদয়ে।</em>", mapDesc: "পদ্মা টেবিলে আসার পথ খুঁজে নিন। সঠিক ঠিকানা যুক্ত হলে ম্যাপে সরাসরি রেস্টুরেন্টের অবস্থান দেখা যাবে।", mapOpen: "Google Maps-এ খুলুন ↗", mapNote: "নোট: এখন ম্যাপে রাজশাহী শহর দেখানো হচ্ছে। রেস্টুরেন্টের সঠিক ঠিকানা বসিয়ে নিলে সেটিই দেখাবে।",
-    footerAbout: "রাজশাহীর অনুপ্রেরণায় বাংলার পরিচিত স্বাদ, যত্নে তৈরি খাবার আর আন্তরিক আতিথেয়তা।", footerLinksTitle: "দ্রুত লিংক", footerContactTitle: "যোগাযোগ", footerHoursTitle: "খোলার সময়", footerHome: "হোম", footerStory: "আমাদের গল্প", footerMenu: "মেনু", footerVisit: "যোগাযোগ", footerBooking: "টেবিল বুকিং", footerAddress: "রাজশাহী শহর, বাংলাদেশ", footerHours: "প্রতিদিন<br>সকাল ১১টা – রাত ১০টা", footerRights: "সর্বস্বত্ব সংরক্ষিত।", footerLine: "ভালো খাবারের সঙ্গে ভালো সময়ের গল্প হোক।", backTop: "উপরে যান ↑", footerCredit: "রাজশাহীর ভালোবাসায় তৈরি"
+    successMessage: "ধন্যবাদ! আপনার অনুরোধটি এই ডেমো পেজে তৈরি হয়েছে। প্রকৃত বুকিং নিশ্চিত করতে রেস্টুরেন্টের সঙ্গে যোগাযোগ করুন।",
+    visitEyebrow: "দেখা হবে টেবিলে", visitTitle: "আপনার অপেক্ষায়<br><em>পদ্মা টেবিল।</em>", addressLabel: "ঠিকানা", addressValue: "রাজশাহী শহর, বাংলাদেশ<br>প্রকৃত ঠিকানা এখানে যুক্ত করুন", contactLabel: "যোগাযোগ", reserveNow: "এখনই বুক করুন", contactNote: "প্রকাশের আগে ফোন, ইমেইল ও সঠিক ঠিকানা বসিয়ে নিন।",
+    mapEyebrow: "আমাদের খুঁজে নিন", mapTitle: "আপনার কাছেই,<br><em>রাজশাহীর হৃদয়ে।</em>", mapDesc: "পদ্মা টেবিলে আসার পথ খুঁজে নিন। সঠিক ঠিকানা যুক্ত হলে ম্যাপে সরাসরি রেস্টুরেন্টের অবস্থান দেখা যাবে।", mapOpen: "Google Maps-এ খুলুন ↗", mapNote: "নোট: এখন ম্যাপে রাজশাহী শহর দেখানো হচ্ছে। রেস্টুরেন্টের সঠিক ঠিকানা বসিয়ে নিলে সেটিই দেখাবে।",
+    footerAbout: "রাজশাহীর অনুপ্রেরণায় বাংলার পরিচিত স্বাদ, যত্নে তৈরি খাবার আর আন্তরিক আতিথেয়তা।", footerLinksTitle: "দ্রুত লিংক", footerContactTitle: "যোগাযোগ", footerHoursTitle: "খোলার সময়", footerHome: "হোম", footerStory: "আমাদের গল্প", footerMenu: "মেনু", footerVisit: "যোগাযোগ", footerBooking: "টেবিল বুকিং", footerAddress: "রাজশাহী শহর, বাংলাদেশ", footerHours: "প্রতিদিন<br>সকাল ১১টা – রাত ১০টা", footerRights: "সর্বস্বত্ব সংরক্ষিত।", footerLine: "ভালো খাবারের সঙ্গে ভালো সময়ের গল্প হোক।", backTop: "উপরে যান ↑", footerCredit: "রাজশাহীর ভালোবাসায় তৈরি"
   },
   en: {
     announcement: "A taste of Rajshahi, in every serving", brandTag: "A little taste of the river city",
@@ -51,6 +55,7 @@ const translations = {
     bookingEyebrow: "Make time for togetherness", bookingTitle: "Shall we save<br><em>you a table?</em>", bookingDesc: "Bring your family or friends. Send us your preferred date and time to request a table.",
     hoursTitle: "Opening hours", hoursValue: "Daily · 11:00 AM – 10:00 PM", locationTitle: "Our city", formTitle: "Reservation request",
     nameLabel: "Your name", phoneLabel: "Phone number", dateLabel: "Date", timeLabel: "Time", selectTime: "Choose a time", guestsLabel: "How many guests?", messageLabel: "Any special requests? (Optional)",
+    guest2: "2 guests", guest3: "3 guests", guest4: "4 guests", guest5: "5 guests", guest6: "6 guests", guest7: "7+ guests",
     sendRequest: "Send request", formNote: "This is a demo form. Connect WhatsApp, email or a backend to accept real reservations.",
     successMessage: "Thank you! Your request has been created on this demo page. Please contact the restaurant to confirm a real booking.",
     visitEyebrow: "We’ll see you at the table", visitTitle: "A warm welcome<br><em>awaits at Padma Table.</em>", addressLabel: "Find us", addressValue: "Rajshahi, Bangladesh<br>Add your actual street address here", contactLabel: "Get in touch", reserveNow: "Reserve now", contactNote: "Add your real phone number, email and full address before publishing.",
@@ -61,11 +66,15 @@ const translations = {
 
 let currentLanguage = 'bn';
 const languageSwitch = document.getElementById('languageSwitch');
+const langLabel = document.getElementById('langLabel');
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 const siteHeader = document.querySelector('.site-header');
 const heroSection = document.querySelector('.hero');
 const scrollTopButton = document.getElementById('scrollTopButton');
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const motionOK = !prefersReducedMotion && 'IntersectionObserver' in window;
 
 // Keep the navigation visible with a subtle shadow while the page is scrolling.
 // Show the floating scroll-to-top button only after the hero section has passed.
@@ -112,23 +121,76 @@ function setLanguage(language) {
   document.querySelectorAll('[data-placeholder-bn]').forEach((element) => {
     element.placeholder = language === 'bn' ? element.dataset.placeholderBn : element.dataset.placeholderEn;
   });
-  document.querySelector('.lang-bn').classList.toggle('active', language === 'bn');
-  document.querySelector('.lang-en').classList.toggle('active', language === 'en');
-  languageSwitch.setAttribute('aria-label', language === 'bn' ? 'Switch to English' : 'বাংলায় পরিবর্তন করুন');
+  // The toggle shows only one language code at a time — the language you will
+  // get when you tap it — and swaps EN <-> BN like the hamburger/cross toggle.
+  if (langLabel) {
+    langLabel.textContent = language === 'bn' ? 'EN' : 'BN';
+    if (!prefersReducedMotion && typeof langLabel.animate === 'function') {
+      langLabel.animate(
+        [
+          { opacity: 0, transform: 'translateY(7px) scale(.7)' },
+          { opacity: 1, transform: 'translateY(0) scale(1)' }
+        ],
+        { duration: 300, easing: 'cubic-bezier(.22,.61,.36,1)' }
+      );
+    }
+  }
+  const switchTitle = language === 'bn' ? 'Switch to English' : 'বাংলায় পরিবর্তন করুন';
+  languageSwitch.setAttribute('aria-label', switchTitle);
+  languageSwitch.setAttribute('title', switchTitle);
   document.title = language === 'bn' ? 'Padma Table | পদ্মা টেবিল — Rajshahi' : 'Padma Table — Rajshahi';
 }
 
 languageSwitch.addEventListener('click', () => setLanguage(currentLanguage === 'bn' ? 'en' : 'bn'));
 
-menuToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
+// Mobile menu: hamburger (three lines) <-> cross (X) toggle.
+function setMenuOpen(isOpen) {
+  mainNav.classList.toggle('open', isOpen);
+  menuToggle.classList.toggle('active', isOpen);
   menuToggle.setAttribute('aria-expanded', String(isOpen));
   menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+}
+
+menuToggle.addEventListener('click', () => setMenuOpen(!mainNav.classList.contains('open')));
+
+mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mainNav.classList.contains('open')) setMenuOpen(false);
 });
-mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  mainNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 720 && mainNav.classList.contains('open')) setMenuOpen(false);
+});
+
+// Scroll-reveal animations: every [data-animate] element plays once when it
+// enters the viewport. Falls back to "always visible" without JS/motion support.
+const animateElements = document.querySelectorAll('[data-animate]');
+if (motionOK) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  animateElements.forEach((element) => revealObserver.observe(element));
+} else {
+  animateElements.forEach((element) => element.classList.add('is-visible'));
+}
+
+// Replay the menu card entrance animation after every filter change.
+function replayMenuCardsAnimation() {
+  const cards = Array.from(document.querySelectorAll('.menu-card')).filter((card) => !card.hidden);
+  cards.forEach((card, index) => {
+    card.classList.remove('is-visible');
+    card.style.setProperty('--d', `${Math.min(index * 70, 490)}ms`);
+  });
+  void document.body.offsetWidth; // force reflow so the animation restarts
+  window.requestAnimationFrame(() => {
+    cards.forEach((card) => card.classList.add('is-visible'));
+  });
+}
 
 document.querySelectorAll('.filter-button').forEach((button) => {
   button.addEventListener('click', () => {
@@ -138,6 +200,7 @@ document.querySelectorAll('.filter-button').forEach((button) => {
     document.querySelectorAll('.menu-card').forEach((card) => {
       card.hidden = filter !== 'all' && card.dataset.category !== filter;
     });
+    if (motionOK) replayMenuCardsAnimation();
   });
 });
 
